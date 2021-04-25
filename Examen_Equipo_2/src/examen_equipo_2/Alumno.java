@@ -9,14 +9,14 @@ public class Alumno extends Profesor {
     private float Calif, Total;
     String opc = "";
 
-    //Constructor Herencia
+    //Constructor heredado de la super clase Profesor 
     public Alumno(String Nombre, String Apellido) {
 
         super(Nombre, Apellido);
 
     }
 
-    //Constrcutor Herencia 
+    //Constructor heredado de la super clase Profesor 
     public Alumno(String Institucion, String Area, int Edad) {
 
         super(Institucion, Area, Edad);
@@ -76,11 +76,13 @@ public class Alumno extends Profesor {
 
     }
 
+    //Metodo para mostrar datos
     public void Salida() {
 
         JOptionPane.showMessageDialog(null, "Nombre del alumno: " + getNombre() + " " + getApellido());
     }
 
+    //Metodo para mostrar datos
     public void Salida(String Sexo) {
         JOptionPane.showMessageDialog(null, "Tiene: " + getEdad() + " años."
                 + "\nSexo: " + Sexo

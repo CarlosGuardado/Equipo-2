@@ -24,6 +24,7 @@ public class Profesor {
         this.Edad = Edad;
     }
 
+    //Metodos getter que sirven para la clase hija Alumno
     public String getNombre() {
         return Nombre;
     }
@@ -44,10 +45,12 @@ public class Profesor {
         return Edad;
     }
 
+    //Metodo para mostrar datos
     public void salida() {
         JOptionPane.showMessageDialog(null, "Nombre del docente: " + Nombre + " " + Apellido);
     }
-
+    
+    //Metodo sobrecarga para mostrar datos
     public void salida(String sexo) {
         this.sexo = sexo;
         JOptionPane.showMessageDialog(null, "Tiene: " + Edad + " años."
