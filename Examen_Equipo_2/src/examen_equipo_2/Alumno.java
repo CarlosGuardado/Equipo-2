@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 public class Alumno extends Profesor {
 
     //Variables extra para la clase alumno
-    private int NumControl, MatCursando, MatAprob, MatReprob, S, N;
+    private int NumControl, MatCursando, MatAprob, MatReprob, S, N,Z;
     private float Calif, Total;
     String opc = "";
 
@@ -40,17 +40,17 @@ public class Alumno extends Profesor {
 
             switch (opc) {
                 case "a":
-                case "A":
+                case "A":Z++;
                     MatCursando = Integer.parseInt(JOptionPane.showInputDialog(null, "Porfavor ingrese el numero de materias"
                             + "\n que cursa el alumno"));
 
-                    if (MatCursando > 0 & MatCursando <= 10) {
+                    if (MatCursando > 0 & MatCursando <= 100) {
                         MatAprob = Integer.parseInt(JOptionPane.showInputDialog(null, "De las " + MatCursando + " materias"
                                 + "que cursa el alumno, ¿cuantas aprobo?."
                                 + "\n"
                                 + "\nSe considerara el resto como reprobadas"));
                         MatReprob = MatCursando - MatAprob;
-
+                        
                         for (int i = 1; i <= MatAprob; i++) {
                             S = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese las calificaciones en orden"));
 
@@ -60,15 +60,16 @@ public class Alumno extends Profesor {
                         Calif = Total / MatCursando;
                         JOptionPane.showMessageDialog(null, "El promedio del alumno es: " + Calif, "", JOptionPane.INFORMATION_MESSAGE);
                     } else {
-                        JOptionPane.showMessageDialog(null, "No estoy para bromas", "", JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Ingreseun valor logico", "", JOptionPane.ERROR_MESSAGE);
                         N++;
                         if(N>=3){
-                            JOptionPane.showMessageDialog(null, "Ya cometiste "+N+" errores, deja de jugar", "", JOptionPane.WARNING_MESSAGE);
+                            JOptionPane.showMessageDialog(null, "Ya ha cometido "+N+" errores, ingrese un valor logico", "", JOptionPane.WARNING_MESSAGE);
                         }
                     }
                     break;
                 case "b":
                 case "B":
+                    JOptionPane.showMessageDialog(null, "Ha calculado "+Z+" promedios");
                     JOptionPane.showMessageDialog(null, "Que tenga un buen dia");
             }
 

@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 public class Profesor {
 
     //Variables para la super clase profesor
-    private String Nombre, sexo;
+    private String Nombre, Genero;
     private String Apellido;
     private String Institucion;
     private String Area;
@@ -23,6 +23,7 @@ public class Profesor {
         this.Area = Area;
         this.Edad = Edad;
     }
+    
 
     //Metodos getter que sirven para la clase hija Alumno
     public String getNombre() {
@@ -51,10 +52,10 @@ public class Profesor {
     }
     
     //Metodo sobrecarga para mostrar datos
-    public void salida(String sexo) {
-        this.sexo = sexo;
+    public void salida(String Genero) {
+        this.Genero = Genero;
         JOptionPane.showMessageDialog(null, "Tiene: " + Edad + " años."
-                + "\nSexo: " + sexo
+                + "\nGenero: " + Genero
                 + "\nInstitución: " + Institucion
                 + "\nArea: " + Area);
 
