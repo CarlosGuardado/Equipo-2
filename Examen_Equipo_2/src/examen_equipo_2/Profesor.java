@@ -70,6 +70,9 @@ public class Profesor {
 
     }
     
+    
+    
+    
     public void salida2() {
         JOptionPane.showMessageDialog(null, "Nombre del docente: " + Nombre + " " + Apellido);
     }

@@ -10,6 +10,8 @@ import javax.swing.JOptionPane;
 
 public class Main {
 
+    // Examen unidad 2
+    
     public static void main(String[] args) {
         
         //Variable para el menu principal
@@ -31,7 +33,7 @@ public class Main {
                 Profesor Profesor1 = new Profesor("Juana", "Garcia");//Parametros de los constructores
                 Profesor Profesor2 = new Profesor("ITCH II", "Ing. Sistemas Computacionales", 30, "Vespertino");//Parametros de los constructores
                 Profesor Profesor3 = new Profesor("Ixrael", "Silva");
-                Profesor Profesor4 = new Profesor("TCH II", "Ing. Sistemas Computacionales", 29, "Vespertino");
+                Profesor Profesor4 = new Profesor("ITCH II", "Ing. Sistemas Computacionales", 29, "Vespertino");
                 //Llamada a los metodos de la clase profesor
                 Profesor1.salida();
                 Profesor2.salida("Mujer");

@@ -22,7 +22,7 @@ public class Alumno extends Profesor {
 
         super(Institucion, Area, Edad, Turno);
 
-    }
+    } 
     
     public void Materias(String Mat1,String Mat2,String Mat3,String Mat4,String Mat5,String Mat6){
         this.Mat1 = Mat1;
