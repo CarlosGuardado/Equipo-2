@@ -5,7 +5,8 @@ import javax.swing.JOptionPane;
 public class Alumno extends Profesor {
 
     //Variables extra para la clase alumno
-    private int NumControl, MatCursando, MatAprob, MatReprob, S, N,Z;
+    private int NumControl, MatCursando, MatAprob, MatReprob, S, N,Z,M;
+    private String Mat1, Mat2, Mat3, Mat4, Mat5, Mat6;
     private float Calif, Total;
     String opc = "";
 
@@ -17,11 +18,22 @@ public class Alumno extends Profesor {
     }
 
     //Constructor heredado de la super clase Profesor 
-    public Alumno(String Institucion, String Area, int Edad) {
+    public Alumno(String Institucion, String Area, int Edad, String Turno) {
 
-        super(Institucion, Area, Edad);
+        super(Institucion, Area, Edad, Turno);
 
     }
+    
+    public void Materias(String Mat1,String Mat2,String Mat3,String Mat4,String Mat5,String Mat6){
+        this.Mat1 = Mat1;
+        this.Mat2 = Mat2;
+        this.Mat3 = Mat3;
+        this.Mat4 = Mat4;
+        this.Mat5 = Mat5;
+        this.Mat6 = Mat6;
+        
+    }
+    
 
     //Metodo
     public void DatosDesempeño(int NumControl) {
@@ -35,7 +47,8 @@ public class Alumno extends Profesor {
 
             opc = JOptionPane.showInputDialog(null, "                     ----- Datos Academicos -----"
                     + "\nA. Ingresar numero de materias y calcular promedio"
-                    + "\nB.  Salir"
+                    + "\nB. Revisar las materias que cursa el alumno"
+                    + "\nC. Salir"
                     + "\nIngrese una opción: ");
 
             switch (opc) {
@@ -68,15 +81,20 @@ public class Alumno extends Profesor {
                     }
                     break;
                 case "b":
-                case "B":
+                case "B":  JOptionPane.showMessageDialog(null, "Las materias de "+getNombre() + " se encuentran listadas a continuacion:"
+                        +"\n2:00 PM  "+Mat1+"\n3:00 PM  "+Mat2+"\n4:00 PM  "+Mat3+"\n5:00 PM  "+Mat4+"\n6:00 PM  "+Mat5+"\n7:00 PM  "+Mat6, "", JOptionPane.INFORMATION_MESSAGE);
+                break;
+                case "c":
+                case "C":
                     JOptionPane.showMessageDialog(null, "Ha calculado "+Z+" promedios");
                     JOptionPane.showMessageDialog(null, "Que tenga un buen dia");
             }
 
-        } while (!opc.equalsIgnoreCase("B"));
+        } while (!opc.equalsIgnoreCase("C"));
 
     }
-
+    
+   
     //Metodo para mostrar datos
     public void Salida() {
 
@@ -86,9 +104,10 @@ public class Alumno extends Profesor {
     //Metodo para mostrar datos
     public void Salida(String Sexo) {
         JOptionPane.showMessageDialog(null, "Tiene: " + getEdad() + " años."
-                + "\nSexo: " + Sexo
+                + "\nGenero: " + Genero
                 + "\nInstitución: " + getInstitucion()
-                + "\nArea: " + getArea());
+                + "\nArea: " + getArea()
+                + "\nTurno: "+getTurno());
     }
 
 }
