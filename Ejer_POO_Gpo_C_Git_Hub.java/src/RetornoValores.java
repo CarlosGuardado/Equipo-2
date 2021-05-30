@@ -22,7 +22,7 @@ public class RetornoValores {
     public static int sumar(int inicio, int fin){
         
         if(fin>inicio){
-            return fin=sumar(inicio, fin-1);
+            return fin+sumar(inicio, fin-1);
             
         }else{
             return fin;
